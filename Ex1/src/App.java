@@ -54,7 +54,7 @@ public class App {
                     on=false;
                     break;
                 default:
-                    System.out.println("Opção inválida");
+                    System.out.println("Opção inválida!");
                     break;
             }
         }
