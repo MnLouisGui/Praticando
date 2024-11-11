@@ -2,49 +2,56 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Funcionario gerente = new Gerente(1000.0, "Jacinto");
-        Funcionario programador = new Programador("Valter", 1500);
+        Geometrica quad = new Quad();
+        Geometrica circ = new Circulo();
 
         Scanner scanner = new Scanner(System.in);
         boolean on=true;
         while (on=true) {
             System.out.println("=================================");
-            System.out.println("Praticando - EX1");
+            System.out.println("Praticando - EX2");
             System.out.println("=================================");
-            System.out.println("1.Ver dados\n2.Aumentar salário\n3.sair");
+            System.out.println("1.Calcular area\n2.Calcular comprimento\n3.sair");
             int op = scanner.nextInt();
             switch (op) {
                 case 1:
                     System.out.println("=================================");
-                    System.out.println("Ver dados");
+                    System.out.println("Area");
                     System.out.println("=================================");
-                    System.out.println("Ver dados de qual funcionário?");
-                    System.out.println("1.Gerente\n2.Progamador\n3.sair");
+                    System.out.println("Calcular area de qual forma geometrica?");
+                    System.out.println("1.Quadrado perfeito\n2.Circulo\n3.sair");
                     op=scanner.nextInt();
                     switch (op) {
                         case 1:
-                            gerente.dados();
+                            System.out.println("Qual a medida dos lados em metros?");
+                            double valor = scanner.nextDouble();
+                            quad.area(valor);
                             break;
                         case 2:
-                            programador.dados();
-                            break;
+                            System.out.println("Qual a medida do raio em metros?");
+                            valor = scanner.nextDouble();
+                            circ.area(valor);
                         default:
                             break;
                     }
                     break;
                 case 2:
                     System.out.println("=================================");
-                    System.out.println("Aumentar salário");
+                    System.out.println("Comprimento");
                     System.out.println("=================================");
-                    System.out.println("Aumentar salário de qual funcionário?");
-                    System.out.println("1.Gerente +10%\n2.Progamador+20%\n3.sair");
+                    System.out.println("Calcular comprimento de qual forma geometrica?");
+                    System.out.println("1.Quadrado perfeito\n2.Circulo\n3.sair");
                     op=scanner.nextInt();
                     switch (op) {
                         case 1:
-                            gerente.aumentar();
+                            System.out.println("Qual a medida dos lados em metros?");
+                            double valor = scanner.nextDouble();
+                            quad.comprimento(valor);
                             break;
                         case 2:
-                            programador.aumentar();
+                            System.out.println("Qual a medida do raio em metros?");
+                            valor = scanner.nextDouble();
+                            circ.comprimento(valor);
                             break;
                         default:
                             break;
